@@ -5,7 +5,7 @@
 }
 
 .llamaButtons {
-	padding: 25px;
+	padding: 12.5px;
 	float: left;
 	text-align: center;
 	margin-left: auto;
@@ -14,7 +14,7 @@
 
 #buttonsDiv {
 	float: left;
-	width: 45%;
+	width: 40%;
 }
 
 .llamaButtons > p {
@@ -33,7 +33,7 @@
 #upgradesDiv {
 	padding: 25px;
 	float: right;
-	width: 45%;
+	width: 60%;
 }
 
 #masterDiv {
@@ -41,6 +41,8 @@
 }
 
 .upgradeDiv {
+	margin-bottom: 10px;
+	margin-right: 10px;
 	width: 150px;
 	text-align: center;
 	border: 2px solid black;
