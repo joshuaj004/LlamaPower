@@ -1,0 +1,68 @@
+/* interface.css */
+.llamaButton {
+	height: 150px;
+	width: 150px;
+}
+
+.llamaButtons {
+	padding: 25px;
+	float: left;
+	text-align: center;
+	margin-left: auto;
+  margin-right: auto;
+}
+
+#buttonsDiv {
+	float: left;
+	width: 45%;
+}
+
+.llamaButtons > p {
+	margin: 0px;
+}
+
+.managingDiv {
+	clear: both;
+	padding: 25px;
+}
+
+.managingDiv > p {
+	margin-top: 10px;
+}
+
+#upgradesDiv {
+	padding: 25px;
+	float: right;
+	width: 45%;
+}
+
+#masterDiv {
+	width: 100%;
+}
+
+.upgradeDiv {
+	width: 150px;
+	text-align: center;
+	border: 2px solid black;
+	padding: 5px;
+	float: left;
+	height: 150px;
+}
+
+.buttonOn {
+	background-color: green;
+}
+
+.buttonOff {
+	background-color: red;
+}
+
+.gradientBackground {
+	background: repeating-linear-gradient(
+		45deg,
+		#D3D3D3,
+		#D3D3D3 10px,
+		#A9A9A9 10px,
+		#A9A9A9 20px
+	);
+}
