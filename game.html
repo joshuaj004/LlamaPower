@@ -1,163 +1,176 @@
 <!DOCTYPE html>
-<head>
-  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="styles.css" />
-  <link rel="stylesheet" type="text/css" href="interface.css" />
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-	<link rel="icon" href="llama.ico" />
-	<title>Llama Power</title>
-</head>
-<body>
-  <nav class="navbar navbar-default">
-	  <div class="container-fluid">
-	    <div class="navbar-header">
-	      <a class="navbar-brand" href="index.html">Llama Power</a>
-	    </div>
-	    <ul class="nav navbar-nav">
-	      <li><a href="index.html">Home</a></li>
-	      <li><a href="pics.html">Llama Pictures</a></li>
-	      <li class="active"><a href="game.html">Llama Clicker</a></li>
-	      <li><a href="about.html">About Josh</a></li>
-	    </ul>
-	  </div>
-	</nav>
-  <h1>Llama Clicker</h1>
-  <div id="masterDiv">
-	<div id="buttonsDiv">
-	<div class="llamaButtons">
-	<input type="image" src="images/image.jpg" alt="Llama button" onclick="humClick(1)" class="llamaButton">
-	<p>Hums: <span id="hums">0</span></p>
-	<p>
-	Hums/sec: <span id="totalHums">0</span>
-	</p>
-	<p>
-	Multiplier: <span id="humMultiplier">1</span>
-	</p>
-	</div>
-	<div class="llamaButtons">
-	<input type="image" src="images/image.jpg" alt="Llama button" onclick="generalBuy(cria)" class="llamaButton">
-	<p>
-	Crias: <span id="crias">0</span>
-	</p>
-	<p>
-	Cost: <span id="criaCost">15</span>
-	</p>
-	<p>
-	Hums/sec: <span id="criaHums">0</span>
-	</p>
-	</div>
-	<div class="llamaButtons">
-	<input type="image" src="images/image.jpg" alt="Llama button" onclick="generalBuy(adolescent)" class="llamaButton">
-	<p>
-	Adolescent: <span id="adolescent">0</span>
-	</p>
-	<p>
-	Cost: <span id="adolescentCost">100</span>
-	</p>
-	<p>
-	Hums/sec: <span id="adolescentHums">0</span>
-	</p>
-	</div>
-	<div class="llamaButtons">
-	<input type="image" src="images/image.jpg" alt="Llama button" onclick="generalBuy(alpaca)" class="llamaButton">
-	<p>
-	Alpacas: <span id="alpacas">0</span>
-	</p>
-	<p>
-	Cost: <span id="alpacaCost">1k</span>
-	</p>
-	<p>
-	Hums/sec: <span id="alpacaHums">0</span>
-	</p>
-	</div>
-	<div class="llamaButtons">
-	<input type="image" src="images/image.jpg" alt="Llama button" onclick="generalBuy(llama)" class="llamaButton">
-	<p>
-	Llamas: <span id="llamas">0</span>
-	</p>
-	<p>
-	Cost: <span id="llamaCost">10k</span>
-	</p>
-	<p>
-	Hums/sec: <span id="llamaHums">0</span>
-	</p>
-	</div>
-  <div class="llamaButtons">
-	<input type="image" src="images/image.jpg" alt="Llama button" onclick="generalBuy(pasture)" class="llamaButton">
-	<p>
-	Pastures: <span id="pastures">0</span>
-	</p>
-	<p>
-	Cost: <span id="pastureCost">130k</span>
-	</p>
-	<p>
-	Hums/sec: <span id="pastureHums">0</span>
-	</p>
-	</div>
-	</div>
 
-  <div id="upgradesDiv">
-  <div id="upgrade1" class="upgradeDiv" onclick="upgradeNum1(100)">
-  <p>Your clicks and crias are now 2x as efficient.</p>
-  <input id="upgrade1Button" type="submit" value="100 Hums">
-  </div>
-  <div id="upgrade2" class="upgradeDiv" onclick="upgradeNum2(500)">
-  <p>Your clicks and crias are now 4x as efficient.</p>
-  <input id="upgrade2Button" type="submit" value="500 Hums">
-  </div>
-  <div id="upgrade3" class="upgradeDiv" onclick="upgradeNum3(1000)">
-  <p>Your adolescents are now 2x as efficient.</p>
-  <input id="upgrade3Button" type="submit" value="1k Hums">
-  </div>
-  <div id="upgrade4" class="upgradeDiv" onclick="upgradeNum4(5000)">
-  <p>Your adolescents are now 4x as efficient.</p>
-  <input id="upgrade4Button" type="submit" value="5k Hums">
-  </div>
-  <div id="upgrade5" class="upgradeDiv" onclick="upgradeNum5(10000)">
-  <p>Your clicks and crias are now 8x as efficient.</p>
-  <input id="upgrade5Button" type="submit" value="10k Hums">
-  </div>
-  <div id="upgrade6" class="upgradeDiv" onclick="upgradeNum6(11000)">
-  <p>Your alpacas are now 2x as efficient.</p>
-  <input id="upgrade6Button" type="submit" value="11k Hums">
-  </div>
-  <div id="upgrade7" class="upgradeDiv" onclick="upgradeNum7(50000)">
-  <p>Your adolescents are now 8x as efficient.</p>
-  <input id="upgrade7Button" type="submit" value="50k Hums">
-  </div>
-  <div id="upgrade8" class="upgradeDiv" onclick="upgradeNum8(55000)">
-  <p>Your alpacas are now 4x as efficient.</p>
-  <input id="upgrade8Button" type="submit" value="55k Hums">
-  </div>
-  <div id="upgrade9" class="upgradeDiv" onclick="upgradeNum9(100000)">
-  <p>Your clicks and crias are now 16x as efficient.</p>
-  <input id="upgrade9Button" type="submit" value="100k Hums">
-  </div>
-  <div id="upgrade10" class="upgradeDiv" onclick="upgradeNum10(120000)">
-  <p>Your llamas are now 2x as efficient.</p>
-  <input id="upgrade10Button" type="submit" value="120k Hums">
-  </div>
-  <div id="upgrade11" class="upgradeDiv" onclick="upgradeNum11(550000)">
-  <p>Your alpacas are now 4x as efficient.</p>
-  <input id="upgrade11Button" type="submit" value="550k Hums">
-  </div>
-  <div id="upgrade12" class="upgradeDiv" onclick="upgradeNum12(600000)">
-  <p>Your llamas are now 4x as efficient.</p>
-  <input id="upgrade12Button" type="submit" value="600k Hums">
-  </div>
-  <div id="upgrade13" class="upgradeDiv" onclick="upgradeNum13(1300000)">
-  <p>Your pastures are now 4x as efficient.</p>
-  <input id="upgrade13Button" type="submit" value="1.3M Hums">
-  </div>
-  </div>
-	</div>
-  <div class="managingDiv">
-	<button onclick="saveGame()">Save Game</button>
-	<button onclick="deleteGame()">Delete Game</button>
-	<button onclick="toggleSound()" id="toggleSound" class="buttonOn">Toggle Sound</button>
-	<p id="saved"></p>
-	</div>
-<script type="text/javascript" src="llama.js"></script>
+<head>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <link rel="stylesheet" type="text/css" href="interface.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="icon" href="llama.ico" />
+    <title>Llama Power</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="index.html">Llama Power</a>
+            </div>
+            <ul class="nav navbar-nav">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="pics.html">Llama Pictures</a></li>
+                <li class="active"><a href="game.html">Llama Clicker</a></li>
+                <li><a href="about.html">About Josh</a></li>
+            </ul>
+        </div>
+    </nav>
+    <h1>Llama Clicker</h1>
+    <div id="masterDiv" style="overflow: hidden;">
+        <div id="buttonsDiv">
+            <div class="llamaButtons">
+                <input type="image" src="images/hum.jpg" alt="Llama button" onclick="humClick(1)" class="llamaButton">
+                <p>Hums: <span id="hums">0</span></p>
+                <p>
+                    Hums/sec: <span id="totalHums">0</span>
+                </p>
+                <p>
+                    Multiplier: <span id="humMultiplier">1</span>
+                </p>
+            </div>
+            <div class="llamaButtons">
+                <input type="image" src="images/cria.jpg" alt="Llama button" onclick="generalBuy(cria)" class="llamaButton">
+                <p>
+                    Crias: <span id="crias">0</span>
+                </p>
+                <p>
+                    Cost: <span id="criaCost">15</span>
+                </p>
+                <p>
+                    Hums/sec: <span id="criaHums">0</span>
+                </p>
+            </div>
+            <div class="llamaButtons">
+                <input type="image" src="images/adolescent.jpg" alt="Llama button" onclick="generalBuy(adolescent)" class="llamaButton">
+                <p>
+                    Adolescent: <span id="adolescents">0</span>
+                </p>
+                <p>
+                    Cost: <span id="adolescentCost">100</span>
+                </p>
+                <p>
+                    Hums/sec: <span id="adolescentHums">0</span>
+                </p>
+            </div>
+            <div class="llamaButtons">
+                <input type="image" src="images/alpaca.jpg" alt="Llama button" onclick="generalBuy(alpaca)" class="llamaButton">
+                <p>
+                    Alpacas: <span id="alpacas">0</span>
+                </p>
+                <p>
+                    Cost: <span id="alpacaCost">1k</span>
+                </p>
+                <p>
+                    Hums/sec: <span id="alpacaHums">0</span>
+                </p>
+            </div>
+            <div class="llamaButtons">
+                <input type="image" src="images/llama.jpg" alt="Llama button" onclick="generalBuy(llama)" class="llamaButton">
+                <p>
+                    Llamas: <span id="llamas">0</span>
+                </p>
+                <p>
+                    Cost: <span id="llamaCost">10k</span>
+                </p>
+                <p>
+                    Hums/sec: <span id="llamaHums">0</span>
+                </p>
+            </div>
+            <div class="llamaButtons">
+                <input type="image" src="images/pasture.jpg" alt="Llama button" onclick="generalBuy(pasture)" class="llamaButton">
+                <p>
+                    Pastures: <span id="pastures">0</span>
+                </p>
+                <p>
+                    Cost: <span id="pastureCost">130k</span>
+                </p>
+                <p>
+                    Hums/sec: <span id="pastureHums">0</span>
+                </p>
+            </div>
+        </div>
+
+        <div id="upgradesDiv">
+            <div id="upgrade1" class="upgradeDiv" onclick="upgradeNum1(100)">
+                <p>Your clicks and crias are now 2x as efficient.</p>
+                <input id="upgrade1Button" class="btn btn-info" type="submit" value="100 Hums">
+            </div>
+            <div id="upgrade2" class="upgradeDiv" onclick="upgradeNum2(500)">
+                <p>Your clicks and crias are now 4x as efficient.</p>
+                <input id="upgrade2Button" class="btn btn-info" type="submit" value="500 Hums">
+            </div>
+            <div id="upgrade3" class="upgradeDiv" onclick="upgradeNum3(1000)">
+                <p>Your adolescents are now 2x as efficient.</p>
+                <input id="upgrade3Button" class="btn btn-info" type="submit" value="1k Hums">
+            </div>
+            <div id="upgrade4" class="upgradeDiv" onclick="upgradeNum4(5000)">
+                <p>Your adolescents are now 4x as efficient.</p>
+                <input id="upgrade4Button" class="btn btn-info" type="submit" value="5k Hums">
+            </div>
+            <div id="upgrade5" class="upgradeDiv" onclick="upgradeNum5(10000)">
+                <p>Your clicks and crias are now 8x as efficient.</p>
+                <input id="upgrade5Button" class="btn btn-info" type="submit" value="10k Hums">
+            </div>
+            <div id="upgrade6" class="upgradeDiv" onclick="upgradeNum6(11000)">
+                <p>Your alpacas are now 2x as efficient.</p>
+                <input id="upgrade6Button" class="btn btn-info" type="submit" value="11k Hums">
+            </div>
+            <div id="upgrade7" class="upgradeDiv" onclick="upgradeNum7(50000)">
+                <p>Your adolescents are now 8x as efficient.</p>
+                <input id="upgrade7Button" class="btn btn-info" type="submit" value="50k Hums">
+            </div>
+            <div id="upgrade8" class="upgradeDiv" onclick="upgradeNum8(55000)">
+                <p>Your alpacas are now 4x as efficient.</p>
+                <input id="upgrade8Button" class="btn btn-info" type="submit" value="55k Hums">
+            </div>
+            <div id="upgrade9" class="upgradeDiv" onclick="upgradeNum9(100000)">
+                <p>Your clicks and crias are now 16x as efficient.</p>
+                <input id="upgrade9Button" class="btn btn-info" type="submit" value="100k Hums">
+            </div>
+            <div id="upgrade10" class="upgradeDiv" onclick="upgradeNum10(120000)">
+                <p>Your llamas are now 2x as efficient.</p>
+                <input id="upgrade10Button" class="btn btn-info" type="submit" value="120k Hums">
+            </div>
+            <div id="upgrade11" class="upgradeDiv" onclick="upgradeNum11(550000)">
+                <p>Your alpacas are now 4x as efficient.</p>
+                <input id="upgrade11Button" class="btn btn-info" type="submit" value="550k Hums">
+            </div>
+            <div id="upgrade12" class="upgradeDiv" onclick="upgradeNum12(600000)">
+                <p>Your llamas are now 4x as efficient.</p>
+                <input id="upgrade12Button" class="btn btn-info" type="submit" value="600k Hums">
+            </div>
+            <div id="upgrade13" class="upgradeDiv" onclick="upgradeNum13(1300000)">
+                <p>Your pastures are now 4x as efficient.</p>
+                <input id="upgrade13Button" class="btn btn-info" type="submit" value="1.3M Hums">
+            </div>
+        </div>
+    </div>
+    <div>
+        <div class="alert alert-success" id="success-alert">
+            <button type="button" class="close" data-dismiss="alert">x</button>
+            Game has been saved.
+        </div>
+        <div class="alert alert-warning" id="warning-alert">
+            <button type="button" class="close" data-dismiss="alert">x</button>
+            Game has been deleted.
+        </div>
+    </div>
+    <div class="managingDiv">
+        <button onclick="saveGame()" class="btn btn-success">Save Game</button>
+        <button onclick="deleteGame()" class="btn btn-warning">Delete Game</button>
+        <button onclick="toggleSound()" id="toggleSound" class="btn btn-success">Toggle Sound</button>
+        <p id="saved"></p>
+    </div>
+    <script type="text/javascript" src="llama.js"></script>
 </body>
+
 </html>
