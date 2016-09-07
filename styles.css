@@ -6,3 +6,14 @@ h1, .email {
   padding-left: 10%;
   padding-right: 10%;
 }
+
+ul li {
+  padding: 5px 0px;
+  list-style-image: url('bullet.jpg');
+}
+
+#ggg {
+  padding: 20px;
+  text-align: center;
+  text-size: 20px;
+}
