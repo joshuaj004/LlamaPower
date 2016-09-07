@@ -1,3 +1,8 @@
-h1, .bio {
+h1, .email {
   text-align: center;
+}
+
+.bio {
+  padding-left: 10%;
+  padding-right: 10%;
 }
