@@ -365,6 +365,7 @@ function saveGame(manualSaved = true) {
 
 function deleteGame() {
     localStorage.removeItem("save");
+    localStorage.setItem("save", '{}');
     $("#warning-alert").alert();
     $("#warning-alert").fadeTo(2000, 500).slideUp(500, function() {
         $("#warning-alert").slideUp(500);
