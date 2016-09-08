@@ -19,16 +19,22 @@ ul li {
 }
 
 .upgradeDiv {
-  border-radius: 5px;
+    border-radius: 5px;
 }
 
 #newGroove {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .llamaP {
+    padding: 2.5% 7.5% 0 7.5%;
+}
 
-  padding: 2.5% 7.5% 0 7.5%;
+code {
+    white-space: normal;
+    display: inline-block;
+    max-width: 100%;
+    overflow: auto;
 }
