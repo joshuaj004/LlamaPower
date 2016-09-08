@@ -112,7 +112,7 @@ function upgradeNum1(cost, reload = false) {
 function upgradeNum2(cost, reload = false) {
     if (upgradeSetter(cost, 2)) {
         upgrades.upgrade2 = true;
-        humMultiplier = 2;
+        humMultiplier = 4;
         rateDoubler(cria, cria.multiplier * 2);
     }
 }
@@ -134,7 +134,7 @@ function upgradeNum4(cost, reload = false) {
 function upgradeNum5(cost, reload = false) {
     if (upgradeSetter(cost, 5)) {
         upgrades.upgrade5 = true;
-        humMultiplier = 4;
+        humMultiplier = 8;
         rateDoubler(cria, cria.multiplier * 2);
     }
 }
@@ -163,7 +163,7 @@ function upgradeNum8(cost, reload = false) {
 function upgradeNum9(cost, reload = false) {
     if (upgradeSetter(cost, 9)) {
         upgrades.upgrade9 = true;
-        humMultiplier = 8;
+        humMultiplier = 16;
         rateDoubler(cria, cria.multiplier * 2);
     }
 }
@@ -315,7 +315,7 @@ window.setInterval(function() {
 
 window.setInterval(function() {
     saveGame(false);
-}, 10000);
+}, 30000);
 
 window.onload = function() {
         $("#success-alert").hide();
@@ -358,7 +358,7 @@ function saveGame(manualSaved = true) {
     }
     localStorage.setItem("save", JSON.stringify(save));
     $("#success-alert").alert();
-    $("#success-alert").fadeTo(2000, 500).slideUp(500, function() {
+    $("#success-alert").fadeTo(1000, 500).slideUp(500, function() {
         $("#success-alert").slideUp(500);
     });
 }
@@ -369,5 +369,6 @@ function deleteGame() {
     $("#warning-alert").fadeTo(2000, 500).slideUp(500, function() {
         $("#warning-alert").slideUp(500);
     });
+    window.location.reload();
 }
 //////////////////////////////
