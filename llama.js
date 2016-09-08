@@ -1,8 +1,13 @@
 ////////// Sounds //////////
 var soundsOn = true;
-var hum = new Audio('sounds/hum.mp3')
-    //////////////////////////////
-    ////////// Misc Vars /////////
+var hum = new Audio('sounds/hum.mp3');
+var baby = new Audio('sounds/baby.mp3');
+var scream = new Audio('sounds/scream.mp3');
+var fight = new Audio('sounds/fight.mp3');
+var mom = new Audio('sounds/mom.mp3');
+var growling = new Audio('sounds/growling.mp3');
+//////////////////////////////
+////////// Misc Vars /////////
 var prestige = 0;
 var hums = 0;
 var humMultiplier = 1;
@@ -49,6 +54,19 @@ function generalBuy(item) {
     var itemCost = Math.floor(item.baseCost * Math.pow(1.15, item.quantity));
     // Check that you can afford the item
     if (hums >= itemCost) {
+        if (soundsOn) {
+            if (item.name == 'cria') {
+                baby.play();
+            } else if (item.name == 'adolescent') {
+                scream.play();
+            } else if (item.name == 'alpaca') {
+                fight.play();
+            } else if (item.name == 'llama') {
+                mom.play();
+            } else if (item.name == 'pasture') {
+                growling.play();
+            }
+        }
         // Increase the quantity of the item
         item.quantity++;
         // Subtract the cost from the hums
