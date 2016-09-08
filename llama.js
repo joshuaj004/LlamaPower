@@ -192,7 +192,7 @@ function upgradeNum12(cost, reload = false) {
 function upgradeNum13(cost, reload = false) {
     if (upgradeSetter(cost, 13)) {
         upgrades.upgrade13 = true;
-        rateDoubler(pastures, pastures.multiplier);
+        rateDoubler(pastures, pastures.multiplier * 2);
     }
 }
 
