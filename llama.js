@@ -112,7 +112,7 @@ function upgradeNum1(cost, reload = false) {
 function upgradeNum2(cost, reload = false) {
     if (upgradeSetter(cost, 2)) {
         upgrades.upgrade2 = true;
-        humMultiplier = 2;
+        humMultiplier = 4;
         rateDoubler(cria, cria.multiplier * 2);
     }
 }
@@ -134,7 +134,7 @@ function upgradeNum4(cost, reload = false) {
 function upgradeNum5(cost, reload = false) {
     if (upgradeSetter(cost, 5)) {
         upgrades.upgrade5 = true;
-        humMultiplier = 4;
+        humMultiplier = 8;
         rateDoubler(cria, cria.multiplier * 2);
     }
 }
@@ -163,7 +163,7 @@ function upgradeNum8(cost, reload = false) {
 function upgradeNum9(cost, reload = false) {
     if (upgradeSetter(cost, 9)) {
         upgrades.upgrade9 = true;
-        humMultiplier = 8;
+        humMultiplier = 16;
         rateDoubler(cria, cria.multiplier * 2);
     }
 }
