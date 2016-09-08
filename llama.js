@@ -315,7 +315,7 @@ window.setInterval(function() {
 
 window.setInterval(function() {
     saveGame(false);
-}, 10000);
+}, 30000);
 
 window.onload = function() {
         $("#success-alert").hide();
