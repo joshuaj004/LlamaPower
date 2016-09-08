@@ -358,7 +358,7 @@ function saveGame(manualSaved = true) {
     }
     localStorage.setItem("save", JSON.stringify(save));
     $("#success-alert").alert();
-    $("#success-alert").fadeTo(2000, 500).slideUp(500, function() {
+    $("#success-alert").fadeTo(1000, 500).slideUp(500, function() {
         $("#success-alert").slideUp(500);
     });
 }
