@@ -241,7 +241,7 @@ function humClick(number, repetition = false) {
 };
 
 function getTotalHums() {
-    var tempTotal = cria.quantity * cria.multiplier + adolescent.quantity * adolescent.multiplier + alpaca.quantity * alpaca.multiplier + llama.quantity * llama.multiplier;
+    var tempTotal = cria.quantity * cria.multiplier + adolescent.quantity * adolescent.multiplier + alpaca.quantity * alpaca.multiplier + llama.quantity * llama.multiplier + pasture.quantity * pasture.multiplier;
     return nFormatter(tempTotal, 3);
 }
 
